@@ -248,21 +248,24 @@ body {
 .nav-ul {
   display: flex;
   justify-content: center;
+  
 }
 
-.nav-li {
+.nav-ul li {
   width: 185px;
+  
 }
 
-.nav-a {
+.nav-ul li a {
   text-align: center;
   display: block;
   padding: 20px;
   color: #73cfae;
+  text-decoration: none;
   transition-duration: .3s;
 }
 
-.nav-ul :hover {
+.nav-ul li :hover {
   background-color: #fff;
 }
 
