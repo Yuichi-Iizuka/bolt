@@ -9,16 +9,16 @@
 
 /* フォントの設定 */
 body {
-  font-family: "Lato","Raleway";
-}
-
-section,article {
-  font-family: "Raleway";
-}
-
-.skills-content_box {
   font-family: "Lato";
 }
+
+.font-raleway {
+  font-family: "RaleWay";
+}
+
+/* .skills-content_box {
+  font-family: "Lato";
+} */
 
 /*幅いっぱい */
 .width-full {
@@ -49,17 +49,32 @@ section,article {
   color: #fff;
 }
 
+/* ボタン */
+.header-contact_button,
+.article-bottom-content-email_button,
+.article-figure-box {
+  transition-duration: .3s;
+  text-decoration: none;
+}
+
+.header-contact_button:hover,
+.article-bottom-content-email_button:hover {
+  color: #333;
+}
 
 /* header */
 .header {
   position: fixed;
   z-index: 10;
+  top: 0;
+  left: 0;
 }
 
 .header-inner {
   padding: 15px 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header-contact_button {
@@ -67,15 +82,9 @@ section,article {
   padding: 14px 12px;
 }
 
-.header-contact_button:hover,
-.article-bottom-content-email_button:hover {
-  transition-duration: .3s;
-  color: #333;
-}
-
 /* title */
 .title-inner {
-  padding: 250px 0;
+  padding: 320px 0 250px 0;
 }
 
 .title-box {
@@ -115,12 +124,13 @@ section,article {
 
 .smartphone-content_flex {
   justify-content: space-between;
+  font-size: 0;
 }
-
 
 .smartphone-content_block {
   display: inline-block;
   padding: 0 50px;
+  vertical-align: top;
 }
 
 .smartphone-content_right-box {
@@ -176,7 +186,6 @@ section,article {
 }
 
 .article-figure-box:hover {
-  transition-duration: .3s;
   opacity: 1;
 }
 
@@ -192,7 +201,7 @@ section,article {
   font-size: 20px;
   word-break: keep-all;
   text-align: center;
-  width: 60%;
+  width: 53%;
 }
 
 .article-bottom-content-email_button {
@@ -236,23 +245,24 @@ section,article {
   padding: 200px 0;
 }
 
-nav ul {
+.nav-ul {
   display: flex;
   justify-content: center;
 }
 
-nav li {
+.nav-li {
   width: 185px;
 }
-nav a {
-  display: block;
+
+.nav-a {
   text-align: center;
-  margin: 20px;
+  display: block;
+  padding: 20px;
   color: #73cfae;
+  transition-duration: .3s;
 }
 
-nav ul :hover {
-  transition-duration: .3s;
+.nav-ul :hover {
   background-color: #fff;
 }
 
