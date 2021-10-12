@@ -16,10 +16,6 @@ body {
   font-family: "RaleWay";
 }
 
-/* .skills-content_box {
-  font-family: "Lato";
-} */
-
 /*幅いっぱい */
 .width-full {
   width: 100%;
@@ -140,7 +136,7 @@ body {
 
 /* main article */
 .article-inner {
-  padding: 60px 0 70px 0;
+  padding: 60px 0 70px;
 }
 
 .article-title-text {
@@ -149,15 +145,16 @@ body {
 }
 
 .article-figure {
-  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
 }
 
 .article-figure li {
   margin-top: 80px;
   margin-left: 100px;
-  float: left;
   transition-duration: .3s;
-  opacity: 0.7;
+  opacity: .7;
 }
 
 .article-figure li:nth-child(3n+1) {
@@ -175,11 +172,12 @@ body {
 .article-figure li a {
   height: 100%;
   display: block;
+  font-size: 0;
   text-decoration: none;
 }
 
 .article-bottom-content_flex {
-  padding-top: 90px;
+  margin-top: 90px;
   display: flex;
   justify-content: center;
 }
@@ -207,7 +205,7 @@ body {
 }
 
 .skills-content_inner {
-  padding: 70px 0 100px 0;
+  padding: 70px 0 100px;
 }
 
 .skills-content_title {
@@ -244,7 +242,6 @@ body {
 .nav-ul {
   display: flex;
   justify-content: center;
-  
 }
 
 .nav-ul li {
@@ -273,14 +270,15 @@ body {
   float: right;
 }
 
+/* TAB用 */
 @media screen and (max-width: 1199px) {
   .inner {
     width: 97%;
   }
 
   .smartphone-content_inner {
+    padding: 50px 0 25px;
     display: block;
-
   }
 
   .smartphone-content-img,
@@ -288,7 +286,93 @@ body {
     width: 100%;
   }
 
-  .smartphone-content_body-text {
-    margin-bottom: 25px;
+  .article-figure {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .article-figure li {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .article-figure li:nth-child(3n+4) {
+    margin-top: 80px;
+  }
+
+  .article-bottom-content_flex {
+    margin-top: 80px;
+    display: block;
+  }
+
+  .article-bottom-content_text {
+    width: 100%;
+  }
+
+  .article-bottom-content {
+    margin-top: 40px;
+    margin-left: 0;
+    text-align: center;
+    
+  }
+
+  .skills-content_box {
+    flex-direction: column;
+  }
+  
+  .skills-content_box li {
+    margin-top: 88px;
+    margin-left: 0;
+  }
+
+  .skills-content_box li:first-child {
+    margin-top: 0;
+  }
+
+}
+
+/* SP用 */
+@media screen and (max-width: 767px) {
+  .header-contact_button {
+    display: none;
+  }
+
+  .header-contact_menu {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: inline-block;
+  }
+
+  .header-contact_menu span {
+    border: 1px solid #ddd;
+    width: 20px;
+    display: block;
+    margin-top: 5px;
+  }
+
+  .header-contact_menu span:first-child {
+    margin-top: 0;
+  }
+
+  .title-inner {
+    padding: 160px 0 130px;
+  }
+
+  .theme-text {
+    font-size: 80px;
+  }
+
+  .nav-inner {
+    padding-top: 50px;
+  }
+
+  .nav-ul {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .nav-ul li {
+    width: 100%;
   }
 }
